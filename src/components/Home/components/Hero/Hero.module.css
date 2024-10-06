@@ -58,7 +58,7 @@
 .arrowIcon {
   margin-right: 8px;
   opacity: 0;
-  transform: translateX(-5px);
+  transform: translateX(-10px);
   transition: all 0.3s ease, width 0.5s ease;
   overflow: hidden;
 }
