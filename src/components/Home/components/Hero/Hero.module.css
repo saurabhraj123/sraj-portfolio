@@ -1,0 +1,94 @@
+.container {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  padding: 0 48px;
+}
+
+.innerContainer {
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+  gap: 128px;
+  height: calc(100vh - 81px - 60px - 30%);
+}
+
+.leftContainer {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 72px;
+  gap: 36px;
+}
+
+.leftContainerHeader {
+  font-size: 106px;
+  line-height: 118px;
+  font-weight: 600;
+}
+
+.description {
+  font-size: 24px;
+  line-height: 36px;
+}
+
+.rightContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 400px;
+}
+
+.projectLabel {
+  font-size: 14px;
+  font-weight: 500;
+  color: rgb(162, 158, 158);
+}
+
+.project {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 0;
+  cursor: pointer;
+  border-bottom: 1px solid rgb(230, 230, 230);
+  position: relative;
+  overflow: hidden;
+}
+
+.arrowIcon {
+  margin-right: 8px;
+  opacity: 0;
+  width: 0;
+  transition: opacity 0.3s ease, width 0.5s ease;
+  overflow: hidden;
+}
+
+.project:hover .arrowIcon {
+  opacity: 1;
+  width: 20px;
+}
+
+.project::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: black;
+  transition: width 0.4s ease;
+}
+
+.project:hover::after {
+  width: 100%;
+}
+
+.projectTitle {
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.808);
+}
+
+.project:hover .projectTitle {
+  color: black;
+}

@@ -1,0 +1,35 @@
+.container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  background-color: #d6ff8c;
+  overflow: hidden;
+}
+
+.marqueeContainer {
+  display: flex;
+  width: 200%;
+  gap: 36px;
+  animation: scroll 30s linear infinite;
+}
+
+.marqueeList {
+  display: flex;
+  font-size: 24px;
+  gap: 36px;
+  white-space: nowrap;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.marqueeContainer:hover {
+  animation-play-state: paused;
+}
