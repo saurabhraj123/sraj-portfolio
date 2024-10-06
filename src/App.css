@@ -1,0 +1,100 @@
+/* General Styles */
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.logo {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.menu li {
+  cursor: pointer;
+}
+
+/* Main Intro */
+.intro {
+  margin: 60px 0;
+}
+
+.intro-title {
+  font-size: 48px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.intro-description {
+  font-size: 18px;
+  color: #555;
+  margin-top: 10px;
+}
+
+/* Projects */
+.projects {
+  margin-top: 40px;
+}
+
+.selected-projects {
+  font-size: 16px;
+  color: #777;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.projects-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.projects-list li {
+  font-size: 24px;
+  margin: 8px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.arrow {
+  font-size: 24px;
+}
+
+/* Footer */
+.footer {
+  background-color: #e0ffb5;
+  color: #000;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  font-size: 16px;
+  border-top: 1px solid #ccc;
+}
+
+.footer p {
+  margin: 0;
+  padding: 0;
+}
