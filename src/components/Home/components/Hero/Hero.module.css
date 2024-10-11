@@ -26,9 +26,33 @@
   font-weight: 600;
 }
 
+.animationBox {
+  overflow: hidden;
+}
+
+.hiText {
+  animation: slide-down 0.7s both;
+  transform: rotateY(35deg);
+}
+
+.nameText {
+  animation: slide-down 0.7s both;
+  animation-delay: 0.1s;
+}
+
 .description {
   font-size: 24px;
   line-height: 36px;
+}
+
+.descriptionFirst {
+  animation: slide-down 0.7s both;
+  animation-delay: 0.3s;
+}
+
+.descriptionSecond {
+  animation: slide-down 0.7s both;
+  animation-delay: 0.4s;
 }
 
 .rightContainer {
@@ -42,6 +66,8 @@
   font-size: 14px;
   font-weight: 500;
   color: rgb(162, 158, 158);
+  animation: slide-down 0.7s both;
+  animation-delay: 0.4s;
 }
 
 .project {
@@ -52,7 +78,7 @@
   cursor: pointer;
   border-bottom: 1px solid rgb(230, 230, 230);
   position: relative;
-  overflow: hidden;
+  animation: slide-down 1s ease-in-out both;
 }
 
 .arrowIcon {
@@ -92,4 +118,18 @@
 
 .project:hover .projectTitle {
   color: black;
+}
+
+@keyframes slide-down {
+  from {
+    transform-origin: left;
+    filter: blur(10px);
+    transform: translateY(-150%);
+  }
+  75% {
+    filter: unset;
+  }
+  to {
+    transform: translateY(0);
+  }
 }

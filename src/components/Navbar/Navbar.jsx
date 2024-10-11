@@ -22,21 +22,25 @@ const navigationLinks = [
 const Navbar = () => {
   return (
     <div className={classes.container}>
-      {/* Left Container */}
-      <div className={classes.leftContainer}>
-        <img
-          src="/profileImage.png"
-          alt="profileImage"
-          className={classes.profileImage}
-        />
-        <div className={classes.userName}>sraj.dev</div>
-      </div>
+      <div className={classes.innerContainer}>
+        {/* Left Container */}
+        <div className={classes.leftContainer}>
+          <img
+            src="/profileImage.png"
+            alt="profileImage"
+            className={classes.profileImage}
+          />
+          <div className={classes.userName}>sraj.dev</div>
+        </div>
 
-      {/* Right Container */}
-      <div className={classes.rightContainer}>
-        {_.map(navigationLinks, (link) => (
-          <div className={classes.navigationLink}>{link.name}</div>
-        ))}
+        {/* Right Container */}
+        <div className={classes.rightContainer}>
+          {_.map(navigationLinks, (link, index) => (
+            <div key={index} className={classes.navigationLink}>
+              {link.name}
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
