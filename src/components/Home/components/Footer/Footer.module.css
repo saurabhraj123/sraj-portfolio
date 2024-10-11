@@ -12,6 +12,7 @@
   width: 200%;
   gap: 36px;
   animation: scroll 30s linear infinite, entry-animation 1s ease-out;
+  animation-delay: calc(var(--banner-delay));
 }
 
 .marqueeList {

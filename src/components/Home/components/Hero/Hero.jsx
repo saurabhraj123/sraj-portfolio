@@ -68,7 +68,7 @@ const Hero = () => {
               <div key={index} className={classes.animationBox}>
                 <div
                   className={classes.project}
-                  style={{ animationDelay: `${index * 0.1}s` }}
+                  style={{ animationDelay: `${1.5 + index * 0.1}s` }} // 1.2s delay for banner
                 >
                   <div className={classes.projectTitle}>{project.title}</div>
                   <FaArrowRight className={classes.arrowIcon} />

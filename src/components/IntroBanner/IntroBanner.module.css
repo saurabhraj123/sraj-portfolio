@@ -1,0 +1,59 @@
+.container {
+  --animation-duration: calc(var(--banner-slide-down-duration) * 1s);
+  --animation-delay: calc(var(--banner-text-animation-duration) * 2 + 0.1 * 1s);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 100;
+  background-color: black;
+  animation: slideDown var(--animation-duration) ease-in-out;
+  animation-delay: 1.1s;
+  animation-fill-mode: forwards;
+}
+
+.introText {
+  --animation-duration: calc(var(--banner-text-animation-duration) * 1s);
+  color: white;
+  font-size: 3rem;
+  animation-name: slideIn, slideOut;
+  animation-duration: var(--animation-duration), var(--animation-duration);
+  animation-delay: 0s, calc(var(--animation-duration) * 2);
+  animation-fill-mode: forwards;
+}
+
+.animationBox {
+  overflow: hidden;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-100%) skewX(30deg);
+  }
+  to {
+    transform: translateY(0) skewX(0deg);
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: none;
+  }
+  to {
+    transform: translateY(100%) skewX(30deg);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(100%);
+    display: none;
+  }
+}

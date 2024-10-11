@@ -33,11 +33,12 @@
 .hiText {
   animation: slide-down 0.7s both;
   transform: rotateY(35deg);
+  animation-delay: calc(var(--banner-delay));
 }
 
 .nameText {
   animation: slide-down 0.7s both;
-  animation-delay: 0.1s;
+  animation-delay: calc(var(--banner-delay) + 0.1s);
 }
 
 .description {
@@ -47,12 +48,12 @@
 
 .descriptionFirst {
   animation: slide-down 0.7s both;
-  animation-delay: 0.3s;
+  animation-delay: calc(var(--banner-delay) + 0.3s);
 }
 
 .descriptionSecond {
   animation: slide-down 0.7s both;
-  animation-delay: 0.4s;
+  animation-delay: calc(var(--banner-delay) + 0.4s);
 }
 
 .rightContainer {
@@ -67,7 +68,7 @@
   font-weight: 500;
   color: rgb(162, 158, 158);
   animation: slide-down 0.7s both;
-  animation-delay: 0.4s;
+  animation-delay: calc(var(--banner-delay) + 0.4s);
 }
 
 .project {

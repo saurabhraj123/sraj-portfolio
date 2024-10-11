@@ -8,6 +8,10 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
-  /* font-weight: 400; */
-  /* font-size: 14px; */
+}
+
+:root {
+  --banner-text-animation-duration: 0.5;
+  --banner-slide-down-duration: 1;
+  --banner-delay: 1.5s;
 }
