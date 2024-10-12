@@ -60,7 +60,9 @@ const Navbar = () => {
         </div>
       </div>
 
-      {selectedContentPanel && <About onClose={closeContentPanel} />}
+      {selectedContentPanel === "about" && (
+        <About onClose={closeContentPanel} />
+      )}
     </div>
   );
 };

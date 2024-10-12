@@ -13,13 +13,13 @@ const ContentPanel = ({ children, onClose }) => {
 
     setTimeout(() => {
       onClose();
-    }, 500);
+    }, 300);
   }, [onClose]);
 
   useEffect(() => {
     const handleKeyDown = (e) => {
       console.log({ e });
-      if (e?.key === "Escape") {
+      if (e.key === "Escape") {
         handleClose();
         e.preventDefault();
       }
