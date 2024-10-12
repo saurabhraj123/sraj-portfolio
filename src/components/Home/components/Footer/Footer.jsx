@@ -2,7 +2,7 @@
 import classes from "./Footer.module.css";
 
 const LIST_ITEMS = [
-  "ASE @Toddle",
+  "ASE @Company",
   "Web developer",
   "Web scraper",
   "Chrome extension developer",
