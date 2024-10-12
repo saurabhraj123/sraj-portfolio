@@ -6,7 +6,8 @@
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.673);
-  animation: fadeIn 0.5s ease-in-out both;
+  animation: pointerEvents 0.4s ease-in both;
+  z-index: 999;
 }
 
 .overlay {
@@ -33,17 +34,28 @@
   height: 88px;
   border-radius: 100%;
   cursor: pointer;
-  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out,
+  visibility: hidden;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out,
     background-color 0.1s ease-in-out;
 }
 
 .overlay:hover .overlayCloseButton {
+  visibility: visible;
   transform: translateX(-300px);
   opacity: 1;
 }
 
 .overlay:active .overlayCloseButton {
   background-color: rgba(0, 0, 0, 0.265);
+}
+
+.container[data-state="closing"] {
+  animation: fadeOut 0.3s ease-in-out both;
+}
+
+.container[data-state="closing"] .overlayCloseButton {
+  background-color: rgba(0, 0, 0, 0.265);
+  animation: fadeOut 0.4s ease-in-out both;
 }
 
 .innerContainer {
@@ -59,6 +71,10 @@
   background-color: white;
   box-shadow: -4px 0 10px rgba(0, 0, 0, 0.5);
   animation: slideLeft 0.5s ease-in-out both;
+}
+
+.innerContainer[data-state="closing"] {
+  animation: slideRight 0.2s ease-in-out both;
 }
 
 .header {
@@ -90,12 +106,12 @@
   color: white;
 }
 
-@keyframes fadeIn {
+@keyframes pointerEvents {
   from {
-    opacity: 0;
+    pointer-events: none;
   }
   to {
-    opacity: 1;
+    pointer-events: all;
   }
 }
 
@@ -105,5 +121,23 @@
   }
   to {
     transform: translateX(0);
+  }
+}
+
+@keyframes slideRight {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
   }
 }
