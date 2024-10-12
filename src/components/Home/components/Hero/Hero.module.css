@@ -37,6 +37,7 @@
 }
 
 .nameText {
+  padding-bottom: 8px;
   animation: slide-down 0.7s both;
   animation-delay: calc(var(--banner-delay) + 0.1s);
 }
