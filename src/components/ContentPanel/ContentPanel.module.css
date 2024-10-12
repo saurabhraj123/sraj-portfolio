@@ -106,6 +106,10 @@
   color: white;
 }
 
+.closeButton:active {
+  background-color: rgba(0, 0, 0, 0.699);
+}
+
 @keyframes pointerEvents {
   from {
     pointer-events: none;
