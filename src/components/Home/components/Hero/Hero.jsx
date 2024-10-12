@@ -10,23 +10,23 @@ import classes from "./Hero.module.css";
 const PROJECTS = [
   {
     id: 1,
-    title: "Project 1",
+    title: "Code Insights (Full Stack)",
   },
   {
     id: 2,
-    title: "Project 2",
+    title: "Protected Docs (Full Stack)",
   },
   {
     id: 3,
-    title: "Project 3",
+    title: "ChatGPT Enhancer (Chrome Extension)",
   },
   {
     id: 4,
-    title: "Project 4",
+    title: "AutoTest Submitter (Web Scraping)",
   },
   {
     id: 5,
-    title: "Project 5",
+    title: "Copy Kat (Python GUI)",
   },
 ];
 

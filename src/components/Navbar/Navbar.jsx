@@ -15,14 +15,14 @@ const navigationLinks = [
     href: "#about",
   },
   {
-    key: "works",
-    name: "Works",
-    href: "#works",
+    key: "Projects",
+    name: "Projects",
+    href: "#projects",
   },
   {
-    key: "contact",
-    name: "Contact",
-    href: "#contact",
+    key: "Resume",
+    name: "Resume",
+    href: "#resume",
   },
 ];
 
